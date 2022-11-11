@@ -1,8 +1,7 @@
 on:
   push:
     branches:
-      -master
-
+      - master
 
 
 
@@ -21,4 +20,4 @@ jops:
 
       - name: 'printing folder contennts'
          run: ls
-         
+
