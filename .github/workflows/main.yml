@@ -18,3 +18,7 @@ jops:
 
       -name: 'testing printing'
         run: echo Mohamed
+
+      - name: 'printing folder contennts'
+         run: ls
+         
