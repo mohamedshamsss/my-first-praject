@@ -1,19 +1,17 @@
-on:
-  push:
-   
-    branches:
-      - master
 
 
-
+on: 
+ push:
+   branches:
+     - master  
 jobs:
-  build:
-    
+ build:
     runs-on: ubuntu-latest 
-    
-    steps:
-      - name: "testing github actions"
-        run: pwd
-      - name: "testing printing"
-        run: echo mohamed
-
+    steps:  
+      - uses: actions/checkout@v3
+      - name: 'Login in dockerhup'
+        run: docker login --username ${{ secrets.USERNAME }} --password ${{ secrets.PASSWORD }}
+      - name: "build image"
+        run: docker build -t ${{ secrets.USERNAME }}/image1 .
+      - name: "push image"
+        run: docker push ${{ secrets.USERNAME }}/image1
