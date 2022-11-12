@@ -15,5 +15,5 @@ jobs:
       - name: "testing github actions"
         run: pwd
       - name: "testing printing"
-        run: echo mohamed
+        run: echo moha
 
